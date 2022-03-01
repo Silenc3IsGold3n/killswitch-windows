@@ -102,7 +102,18 @@ namespace killswitch_windows
                         System.Threading.Thread.Sleep(5000);
                         adapters = NetworkInterface.GetAllNetworkInterfaces();
                     }
-                    Console.WriteLine("VPN Online");
+                    try
+                    {
+                        string externalIpString = new WebClient().DownloadString("http://icanhazip.com").Replace("\\r\\n", "").Replace("\\n", "").Trim();
+
+                        var externalIp = IPAddress.Parse(externalIpString);
+
+                        Console.WriteLine("VPN online with current IP as: " + externalIp.ToString());
+                    }
+                    catch
+                    {
+                        Console.WriteLine("VPN Online");
+                    }
                 }
 
                 // start listening for a network change
