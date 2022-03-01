@@ -1,7 +1,5 @@
 # NOTICE!
-I have been meaning to work on this, but I do not have the time right now. I am going to post the source for [killswitch-core](https://github.com/t0nic/killswitch-core) which is a better version of this program written in .NET Core
-
-
+There is an .Net Core alternative version of this by the original author that has some of the features listed in "coming soon" at [killswitch-core](https://github.com/t0nic/killswitch-core) but there author has created no documentation for it. 
 
 
 
@@ -10,7 +8,7 @@ I have been meaning to work on this, but I do not have the time right now. I am 
 <!-- Replace this badge with your own-->
 [![Build status](https://ci.appveyor.com/api/projects/status/hv6uyc059rqbc6fj?svg=true)](https://ci.appveyor.com/project/madskristensen/extensibilitytools)
 
-Download The Precompiled binary [here](https://github.com/t0nic/killswitch-windows/releases)
+Download The Precompiled binary [here](https://github.com/Silenc3IsGold3n/killswitch-windows/releases)
 ---------------------------------------
 
 ![Loading image...](https://i.imgur.com/B29zayG.png)
@@ -22,14 +20,14 @@ See the [change log](CHANGELOG.md) for changes and road map.
 ## How To Use
 
 - download the source and compile, or go to releases and download the precompiled binary
-- turn on your vpn
 - run KillSwitch
 - select the interface that your vpn runs on
+- turn on your vpn
 - if you are disconnected from the vpn
-  - close all programs that could expose your (once you turn your internet traffic back on)
-  - close KillSwitch
-  - restart KillSwitch, and close it after you see that your internet has been enabled.
-  - connect to your vpn again and run the program
+  - close all programs that could expose your IP (once you turn your internet traffic back on)
+  - connect to your vpn again 
+  - restart KillSwitch (By pressing Enter)
+  - Restart any closed programs that would expose your IP
  
   
 ## How it works
