@@ -54,7 +54,11 @@ namespace killswitch_windows
             //foreach (NetworkInterface n in adapters)
             foreach (var x in adapters.Select((value, index) => new { value, index }))
             {
-                Console.WriteLine("\t{0} - {1}", x.index, x.value.Name);
+                if (x.value.Description.Contains("TAP"))
+                {
+                    Console.WriteLine("\t{0} - {1} - {2}", x.index, x.value.Name, x.value.Description,Color.Green);
+                }
+                Console.WriteLine("\t{0} - {1} - {2}", x.index, x.value.Name, x.value.Description);
             }
             Console.Write(">");
             nicChoice = Convert.ToInt32(Console.ReadLine());
